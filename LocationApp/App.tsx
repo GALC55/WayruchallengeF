@@ -6,12 +6,15 @@ import {
   Alert,
   View,
   StyleSheet,
+  Text,
   NativeModules,
 } from 'react-native';
 
-const {LocationPermissionModule} = NativeModules;
+const {LocationModule} = NativeModules;
 
-const requestLocationPermission = async () => {
+const requestLocationPermission = async (
+  setPermissionStatus: (status: string) => void,
+) => {
   if (Platform.OS === 'android') {
     // Solicitar permiso en Android
     try {
@@ -35,15 +38,32 @@ const requestLocationPermission = async () => {
       console.warn(err);
     }
   } else if (Platform.OS === 'ios') {
-    // Llamar al módulo nativo en iOS
+    //Solicitar permisos en IOS
     try {
-      const result = await LocationPermissionModule.requestLocationPermission();
-      Alert.alert('iOS', result);
+      const status = await LocationModule.requestLocationPermission();
+      setPermissionStatus(status);
+
+      if (status === 'granted') {
+        Alert.alert(
+          'Permiso concedido',
+          '¡Gracias por permitir el acceso a tu ubicación!',
+        );
+      } else if (status === 'denied') {
+        Alert.alert('Permiso denegado', 'No podremos acceder a tu ubicación.');
+      } else if (status === 'requested') {
+        // Alert.alert('Permiso solicitado', 'Se solicito la ubicación.');
+      } else {
+        Alert.alert(
+          'Estado desconocido',
+          `El estado del permiso es: ${status}`,
+        );
+      }
     } catch (error) {
-      console.error(error);
-      const errorMessage =
-        (error as Error).message || 'Failed to request permission';
-      Alert.alert('Error', errorMessage);
+      console.error('Error al solicitar permisos de ubicación:', error);
+      Alert.alert(
+        'Error',
+        'Ocurrió un error al solicitar permisos de ubicación.',
+      );
     }
   } else {
     Alert.alert('Unsupported Platform', 'This platform is not supported.');
@@ -51,11 +71,13 @@ const requestLocationPermission = async () => {
 };
 
 const App = () => {
+  const [permissionStatus, setPermissionStatus] = React.useState('');
   return (
     <View style={styles.container}>
+      <Text>Status: {permissionStatus}</Text>
       <Button
         title="Request Location Permission"
-        onPress={requestLocationPermission}
+        onPress={requestLocationPermission.bind(null, setPermissionStatus)}
       />
     </View>
   );
