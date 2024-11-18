@@ -62,6 +62,3 @@ npm run ios
 ## Notas
 
 - Si encuentras problemas al ejecutar el comando `npm run ios`, asegúrate de que el simulador esté encendido y de que las configuraciones de tu entorno sean compatibles con el proyecto.
-- Este proyecto está diseñado para ejecutarse en dispositivos iOS y no incluye configuración para Android.
-
-¡Disfruta desarrollando con **LocationApp**!
