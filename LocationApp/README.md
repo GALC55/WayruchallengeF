@@ -8,6 +8,8 @@ Este proyecto es una aplicación de React Native que utiliza Expo para gestionar
 - macOS con Xcode instalado
 - Node.js instalado
 - Git instalado
+- Cocoapods para gestionar dependencias de iOS
+(instálalo con sudo gem install cocoapods si no lo tienes)
 
 ## Pasos para configurar y ejecutar la aplicación
 
@@ -42,6 +44,12 @@ Ejecuta el siguiente comando para instalar las dependencias necesarias:
 ```bash
 npm install
 ```
+Los siguientes comandos es para las dependencias de Ios:
+```bash
+cd ios
+pod install
+cd ..
+```
 
 ### 5. Iniciar el emulador de iPhone de Xcode
 
@@ -58,7 +66,13 @@ npm run ios
 ```
 
 ---
-
+### 7. Solución de problemas (si es necesario)
+Errores comunes:
+-"No podfile found": Asegúrate de haber ejecutado pod install en la carpeta ios.
+-"Command run-ios not found": Verifica que React Native CLI esté instalado globalmente:
+```bash
+npm install -g react-native-cli
+```
 ## Notas
 
 - Si encuentras problemas al ejecutar el comando `npm run ios`, asegúrate de que el simulador esté encendido y de que las configuraciones de tu entorno sean compatibles con el proyecto.
