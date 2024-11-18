@@ -1,79 +1,67 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# LocationApp
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Este proyecto es una aplicación de React Native que utiliza Expo para gestionar la ubicación en dispositivos iOS. A continuación, se describen los pasos para configurar y ejecutar la aplicación en un emulador de iPhone utilizando Xcode.
 
-## Step 1: Start the Metro Server
+## Requisitos previos
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- macOS con Xcode instalado
+- Node.js y npm instalados
+- Git instalado
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Pasos para configurar y ejecutar la aplicación
+
+### 1. Configurar el emulador de Xcode
+
+Asegúrate de que Xcode esté instalado y configurado correctamente en tu sistema:
+
+1. Abre Xcode.
+2. Navega a **Preferences > Platforms > iOS** y asegúrate de tener un simulador de iPhone descargado.
+3. Configura el simulador según tus necesidades.
+
+### 2. Clonar el repositorio con Git
+
+Clona el repositorio del proyecto en tu máquina local:
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone <URL_DEL_REPOSITORIO>
 ```
 
-## Step 2: Start your Application
+### 3. Entrar en la carpeta del proyecto
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+Navega a la carpeta principal del proyecto:
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+cd LocationApp
 ```
 
-### For iOS
+### 4. Instalar todas las dependencias
+
+Ejecuta el siguiente comando para instalar las dependencias necesarias:
 
 ```bash
-# using npm
+npm install
+```
+
+### 5. Iniciar el emulador de iPhone de Xcode
+
+1. Abre Xcode.
+2. Ve a **Xcode > Open Developer Tool > Simulator**.
+3. Selecciona el modelo de iPhone que deseas emular.
+
+### 6. Ejecutar el comando para instalar la aplicación en el emulador
+
+Ejecuta el siguiente comando para compilar e instalar la aplicación en el emulador:
+
+```bash
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+---
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Notas
 
-## Step 3: Modifying your App
+- Si encuentras problemas al ejecutar el comando `npm run ios`, asegúrate de que el simulador esté encendido y de que las configuraciones de tu entorno sean compatibles con el proyecto.
+- Este proyecto está diseñado para ejecutarse en dispositivos iOS y no incluye configuración para Android.
 
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+¡Disfruta desarrollando con **LocationApp**!
