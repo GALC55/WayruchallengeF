@@ -24,7 +24,7 @@ Asegúrate de que Xcode esté instalado y configurado correctamente en tu sistem
 Clona el repositorio del proyecto en tu máquina local:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/GALC55/WayruchallengeF.git
 ```
 
 ### 3. Entrar en la carpeta del proyecto
