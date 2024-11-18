@@ -62,3 +62,4 @@ npm run ios
 ## Notas
 
 - Si encuentras problemas al ejecutar el comando `npm run ios`, asegúrate de que el simulador esté encendido y de que las configuraciones de tu entorno sean compatibles con el proyecto.
+- Para mayor comodidad se recomienda una vez clonado el repositorio, se abra en Visual Studio Code y realizar los comandos de terminal desde ahí.
