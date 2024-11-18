@@ -6,7 +6,7 @@ Este proyecto es una aplicación de React Native que utiliza Expo para gestionar
 ## Requisitos previos
 
 - macOS con Xcode instalado
-- Node.js y npm instalados
+- Node.js instalado
 - Git instalado
 
 ## Pasos para configurar y ejecutar la aplicación
